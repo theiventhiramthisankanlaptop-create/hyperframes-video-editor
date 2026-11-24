@@ -1,6 +1,6 @@
 # HyperFrames Video Editor
 
-A starter toolkit for short-form video editing with FFmpeg, faster-whisper captions, and HyperFrames.
+A starter toolkit for short-form video editing with FFmpeg, faster-whisper captions, yt-dlp downloads, and HyperFrames.
 
 ## Requirements
 
@@ -19,6 +19,24 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
+
+## Download a video for study
+
+Download a video you own or are authorized to download. Respect copyright, platform terms, and access restrictions.
+
+```bash
+npm run download -- "https://www.youtube.com/watch?v=VIDEO_ID"
+```
+
+Files are saved in `downloads/`. yt-dlp also saves an info JSON and description alongside the media, which can help inspect title, uploader, duration, tags, dimensions, and other available metadata.
+
+Download available subtitles:
+
+```bash
+npm run download -- "VIDEO_URL" --subtitles --auto-subs --sub-langs "en.*,si.*,ta.*"
+```
+
+If the source provides captions, they are saved beside the video. If not, use faster-whisper below to create your own transcript from the downloaded media. Some sites may require a supported sign-in or other access configuration; this project does not bypass DRM, paywalls, or access controls.
 
 ## Generate Whisper captions
 
@@ -52,6 +70,6 @@ The generated `.srt` remains editable. Review names, numbers, punctuation, and S
 npm run cut -- input.mp4 00:00:05 12 output.mp4
 npm run concat -- clip1.mp4 clip2.mp4 output.mp4
 npm run probe -- input.mp4
-``
+```
 
 Generated clips and renders should be kept locally; large media files are excluded by `.gitignore`.
