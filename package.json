@@ -1,0 +1,15 @@
+{
+  "name": "hyperframes-video-editor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Short-form video editing toolkit using FFmpeg and HyperFrames",
+  "scripts": {
+    "cut": "node scripts/cut.mjs",
+    "concat": "node scripts/concat.mjs",
+    "probe": "node scripts/probe.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
