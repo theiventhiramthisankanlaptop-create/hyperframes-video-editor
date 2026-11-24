@@ -1,0 +1,9 @@
+node_modules/
+dist/
+renders/
+clips/
+*.mp4
+*.mov
+*.mkv
+.env
+.DS_Store
