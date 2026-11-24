@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Short-form video editing toolkit using FFmpeg and HyperFrames",
+  "description": "Short-form video editing toolkit using FFmpeg, faster-whisper, yt-dlp, and HyperFrames",
   "scripts": {
     "cut": "node scripts/cut.mjs",
     "concat": "node scripts/concat.mjs",
     "probe": "node scripts/probe.mjs",
-    "captions": "python scripts/captions.py"
+    "captions": "python scripts/captions.py",
+    "download": "python scripts/download.py"
   },
   "engines": {
     "node": ">=22"
