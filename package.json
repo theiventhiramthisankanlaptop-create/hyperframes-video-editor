@@ -7,7 +7,8 @@
   "scripts": {
     "cut": "node scripts/cut.mjs",
     "concat": "node scripts/concat.mjs",
-    "probe": "node scripts/probe.mjs"
+    "probe": "node scripts/probe.mjs",
+    "captions": "python scripts/captions.py"
   },
   "engines": {
     "node": ">=22"
